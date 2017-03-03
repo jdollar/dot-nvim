@@ -1,6 +1,6 @@
 filetype off
 
-set rtp+=~/.config/nvim/bundle/Vundler.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 
 set nocompatible
 set number

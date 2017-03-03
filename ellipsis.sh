@@ -9,7 +9,6 @@ pkg.link() {
 pkg.install() {
   git submodule init
   git submodule update
-
 }
 
 pkg.pull() {
