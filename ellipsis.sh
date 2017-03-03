@@ -9,4 +9,6 @@ pkg.link() {
 pkg.install() {
   git submodule init
   git submodule update
+
+  nvim +PluginClean! +PluginInstall! +qall
 }
