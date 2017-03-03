@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundler.vim
 
 set nocompatible
 set number
-set term=xterm-256color
+"set term=xterm-256color
 set background=dark
 set laststatus=2
 set nowrap
@@ -27,7 +27,9 @@ Plugin 'bling/vim-airline'
 Plugin 'jeetsukumaran/vim-filebeagle'
 Plugin 'flazz/vim-colorschemes'
 "comment out the following line if in arch. Need to use aur setup or upstream installation
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 
@@ -42,8 +44,6 @@ set statusline+=%*
 "let g:solarized_termcolors= 256
 let g:typescript_indent_disable = 1
 let g:ycm_register_as_syntastic_checker = 0
-
-
 
 set autoindent
 syntax enable
