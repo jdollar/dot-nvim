@@ -10,5 +10,16 @@ pkg.install() {
   git submodule init
   git submodule update
 
+}
+
+pkg.pull() {
+  git.pull
+
   nvim +PluginClean! +PluginInstall! +qall
+}
+
+pkg.unlink() {
+  rm "$ELLIPSIS_HOME/.config/nvim"
+
+  hooks.unlink
 }
