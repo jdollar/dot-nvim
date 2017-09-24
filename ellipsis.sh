@@ -3,7 +3,8 @@
 pkg.link() {
   case $(os.platform) in
     osx)
-      fs.link_files "platforms/osx" "$HOME/.config/nvim"
+      fs.link_file "platforms/osx/init.vim" "$HOME/.config/nvim/init.vim"
+      fs.link_file "platforms/osx/bundle" "$HOME/.config/nvim/bundle"
       ;;
   esac
 }
