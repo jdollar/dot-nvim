@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 pkg.link() {
-  fs.link_file "$PKG_PATH" "$ELLIPSIS_HOME/.config/nvim"
+  case $(os.platform) in
+    osx)
+      fs.link_files "platforms/osx" "$HOME/.config/nvim"
+      ;;
+  esac
 }
 
 pkg.install() {
@@ -16,7 +20,7 @@ pkg.pull() {
 }
 
 pkg.unlink() {
-  rm "$ELLIPSIS_HOME/.config/nvim"
+  rm "$HOME/.config/nvim"
 
   hooks.unlink
 }
