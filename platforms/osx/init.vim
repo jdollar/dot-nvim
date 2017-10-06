@@ -19,7 +19,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 "Removing solarized in favor of zenburn
 "Plugin 'altercation/vim-colors-solarized'
@@ -29,21 +28,9 @@ Plugin 'flazz/vim-colorschemes'
 "comment out the following line if in arch. Need to use aur setup or upstream installation
 "Plugin 'valloric/youcompleteme'
 Plugin 'Shougo/deoplete.nvim'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'w0rp/ale'
 
 call vundle#end()
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:solarized_termcolors= 256
-let g:typescript_indent_disable = 1
-let g:ycm_register_as_syntastic_checker = 0
 
 set autoindent
 syntax enable
