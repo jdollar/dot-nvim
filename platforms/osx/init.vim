@@ -29,8 +29,14 @@ Plugin 'flazz/vim-colorschemes'
 "Plugin 'valloric/youcompleteme'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'w0rp/ale'
+Plugin 'rrrene/credo'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
+
+let g:ale_linters = {
+\    'elixir': ['credo']
+\}
 
 set autoindent
 syntax enable
