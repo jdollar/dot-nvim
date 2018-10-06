@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 pkg.link() {
+  mkdir -p "$HOME/.config/nvim"
+
   case $(os.platform) in
     osx)
       fs.link_file "platforms/osx/init.vim" "$HOME/.config/nvim/init.vim"
