@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+install_plugins() {
+  nvim +PluginClean! +PluginInstall! +qall
+}
+
 pkg.link() {
   [[ ! -d "$HOME/.config/nvim" ]] && mkdir -p "$HOME/.config/nvim"
 
@@ -18,12 +22,14 @@ pkg.link() {
 pkg.install() {
   git submodule init
   git submodule update
+
+  install_plugins
 }
 
 pkg.pull() {
   git.pull
 
-  nvim +PluginClean! +PluginInstall! +qall
+  install_plugins
 }
 
 pkg.unlink() {
