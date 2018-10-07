@@ -1,6 +1,6 @@
 filetype off
 
-set rtp+=~/.config/nvim/bundle/Vundle.vim
+set rtp+=$HOME/.config/nvim/bundle/Vundle.vim
 
 set nocompatible
 set number
@@ -15,7 +15,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-call vundle#begin()
+call vundle#begin('$HOME/.config/nvim/bundle)
 
 Plugin 'VundleVim/Vundle.vim'
 
