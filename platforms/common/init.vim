@@ -15,7 +15,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-call vundle#begin('$HOME/.config/nvim/bundle)
+call vundle#begin('$HOME/.config/nvim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
 
