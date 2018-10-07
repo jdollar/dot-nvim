@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 pkg.link() {
-  mkdir -p "$HOME/.config/nvim"
+  [[ ! -d "$HOME/.config/nvim" ]] && mkdir -p "$HOME/.config/nvim"
 
   case $(os.platform) in
     osx)
