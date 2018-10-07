@@ -9,7 +9,7 @@ pkg.link() {
       fs.link_file "platforms/osx/bundle" "$HOME/.config/nvim/bundle"
       ;;
     linux)
-      fs.link_file "platforms/common/init.vim" "$HOME/.config/nvim/init.vm"
+      fs.link_file "platforms/common/init.vim" "$HOME/.config/nvim/init.vim"
       fs.link_file "platforms/common/bundle" "$HOME/.config/nvim/bundle"
       ;;
   esac
@@ -27,7 +27,7 @@ pkg.pull() {
 }
 
 pkg.unlink() {
-  rm "$HOME/.config/nvim"
+  rm -r "$HOME/.config/nvim"
 
   hooks.unlink
 }
