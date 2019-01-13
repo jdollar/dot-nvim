@@ -8,17 +8,7 @@ install_plugins() {
 }
 
 pkg.link() {
-  fs.link_file "platforms/common/after" "$HOME/.config/nvim/after"
-
-  case $(os.platform) in
-    osx)
-      fs.link_file "platforms/osx/init.vim" "$HOME/.config/nvim/init.vim"
-      ;;
-    linux)
-      fs.link_file "platforms/common/init.vim" "$HOME/.config/nvim/init.vim"
-      ;;
-  esac
-
+  fs.link_rfile "platforms/common" "$HOME/.config/nvim"
   install_plugins
 }
 
@@ -33,7 +23,7 @@ pkg.pull() {
 }
 
 pkg.unlink() {
-  rm -r "$HOME/.config/nvim"
+  rm -rf "$HOME/.config/nvim"
 
   hooks.unlink
 }
