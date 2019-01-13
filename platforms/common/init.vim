@@ -38,4 +38,3 @@ let g:ale_linters = {
 
 "set autoindent
 "syntax enable
-colorscheme zenburn 
