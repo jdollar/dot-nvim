@@ -29,7 +29,7 @@ pkg.install() {
 pkg.pull() {
   git.pull
 
-  install_plugins
+  nvim +PlugClean! +PlugUpdate! +qall --noplugin
 }
 
 pkg.unlink() {
