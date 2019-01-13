@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 install_plugins() {
-  nvim +PluginClean! +PluginInstall! +qall
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+  nvim +PlugClean! +PlugInstall! +qall
 }
 
 pkg.link() {
-  [[ ! -d "$HOME/.config/nvim" ]] && mkdir -p "$HOME/.config/nvim"
+  [ ! -d "$HOME/.config/nvim" ] && mkdir -p "$HOME/.config/nvim"
 
   case $(os.platform) in
     osx)
